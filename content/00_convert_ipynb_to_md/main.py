@@ -32,20 +32,9 @@ softwareSetup_out = md_index.softwareSetup_episode[0][:-1] + '.md'
 md_episodes.process_episodes_md(softwareSetup_raw, softwareSetup_out)
 
 # process `lesson` episodes
-# print(md_index.lesson_episodes)
 for ifile in md_index.lesson_episodes:
-	print(ifile)
-
-ifile = 'Python-HPDA-1-Motivation'
-episode_raw = ifile + '-raw.md'
-episode_out = ifile + '.md'
-print(episode_raw, episode_out)
-md_episodes.process_episodes_md(episode_raw, episode_out)
-
-
-ifile = 'Python-HPDA-2-EfficientArrayComputing'
-episode_raw = ifile + '-raw.md'
-episode_out = ifile + '.md'
-print(episode_raw, episode_out)
-md_episodes.process_episodes_md(episode_raw, episode_out)
+	episode_raw = ifile + '-raw.md'
+	episode_out = ifile + '.md'
+	print(episode_raw, episode_out)
+	md_episodes.process_episodes_md(episode_raw, episode_out)
 

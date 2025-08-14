@@ -2,7 +2,6 @@
 # Script Name:   md_episodes.py
 # Description:   This file is used to update Markdown files for
 #                `Software setup` and `Lesson` episodes.
-#                - remove `Content of this notebook`
 #
 # Author:        Yonglei WANG
 # Date:          2025-08-12
@@ -130,8 +129,6 @@ def update_video_format(input_file):
 
 
 
-
-
 def update_image_format(input_file):
 	"""
 	update styling format for images
@@ -172,8 +169,6 @@ def remove_toc(input_file):
 
 
 
-
-
 def process_episodes_md(input_file, output_file):
 	"""
 	update styling settings from raw markdown files
@@ -194,7 +189,10 @@ def process_episodes_md(input_file, output_file):
 
 	# remove toc
 	contents = remove_toc(contents)
+
+	# convert keywords in raw MD file to format for sphinx directives
 	contents = convert_directives(contents)
+
 	contents = process_solution_directive(contents)
 	contents = update_video_format(contents)
 	contents = update_image_format(contents)
@@ -206,6 +204,7 @@ def process_episodes_md(input_file, output_file):
 
 if __name__ == "__main__":
 	input_file = "Python-HPDA-2-EfficientArrayComputing-raw.md"
-	process_episodes_md(input_file, '000000000000.md')
-	print(f"Deleted alert-info blocks from {input_file}")
+	output_file = input_file[-6:]+'test.md'
+	process_episodes_md(input_file, output_file)
+	print(f"Processing {input_file} file to {output_file}")
 

@@ -142,4 +142,3 @@ def create_index_md(input_file, output_file):
 
 	get_title_intro_part(content_remove_styling, 'index.md')
 
-
