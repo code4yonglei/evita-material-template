@@ -31,6 +31,7 @@
 ## Processing Jupyter NBs to Markdown files
 
 - put the logo file `evita.png` at `img` directory
+	- replace `html_logo = "img/ENCCS.jpg"` in `conf.py` file to `html_logo = "img/evita.png"`
 - create a `00_convert_ipynb_to_md` directory with correpondent files
 	- four Python scripts in this directory
 	- `cd 00_convert_ipynb_to_md/`
