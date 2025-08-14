@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Performance Data Analytics in Python &mdash; High Performance Data Analytics in Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/overrides.css?v=c88db32d" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=35a8b989"></script>
+      <script src="../../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            High Performance Data Analytics in Python
+              <img src="../../_static/evita.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Software setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Python-HPDA-0-SoftwareSetup/">Setting Up Programming Environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lesson episodes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Python-HPDA-1-Motivation/">1. Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python-HPDA-2-EfficientArrayComputing/">2. Efficient Array Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3-jupyter-notebook-styling/">3. Sphinx Directives</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">High Performance Data Analytics in Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">High Performance Data Analytics in Python</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ENCCS/evita-material-template/blob/main/content/module-ipynb/Python-HPDA.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="high-performance-data-analytics-in-python">
+<h1>High Performance Data Analytics in Python<a class="headerlink" href="#high-performance-data-analytics-in-python" title="Link to this heading"></a></h1>
+<p>Scientists, engineers and professionals from many sectors are seeing an enormous growth in the size and number of datasets relevant to their domains. Professional titles have emerged to describe specialists working with data, such as data scientists and data engineers, but also other experts are finding it necessary to learn tools and techniques to work with big data. Typical tasks include preprocessing, analysing, modeling and visualising data.</p>
+<p>Python is an industry-standard programming language for working with data on all levels of the data analytics pipeline. This is in large part because of the rich ecosystem of libraries ranging from generic numerical libraries to special-purpose and/or domain-specific packages, often supported by large developer communities and stable funding sources.</p>
+<p>This lesson will give an overview of working with research data in Python using general libraries for storing, processing, analysing and sharing data. The focus is on high performance. After covering tools for performant processing on single workstations the focus shifts to profiling and optimising, parallel and distributed computing.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Basic experience with Python</p></li>
+<li><p>Basic experience in working in a Linux-like terminal</p></li>
+<li><p>Some prior experience in working with large or small datasets</p></li>
+</ul>
+</section>
+<section id="reading-materials">
+<h2>Reading materials<a class="headerlink" href="#reading-materials" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/">Python for Scientific Computing</a></p></li>
+<li><p><a class="reference external" href="https://uppmax.github.io/HPC-python/">Using Python in an HPC Environment</a></p></li>
+<li><p><a class="reference external" href="https://enccs.github.io/python-perf/">Python Performance Workshop</a></p></li>
+<li><p>…</p></li>
+</ul>
+</section>
+<section id="software-setup">
+<h2>Software setup<a class="headerlink" href="#software-setup" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="../Python-HPDA-0-SoftwareSetup/"><span class="std std-doc">Setting up programming environment</span></a></p>
+</section>
+<section id="lesson-episodes">
+<h2>Lesson episodes<a class="headerlink" href="#lesson-episodes" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../Python-HPDA-1-Motivation/"><span class="std std-doc">Motivation</span></a></p></li>
+<li><p><a class="reference internal" href="../Python-HPDA-2-EfficientArrayComputing/"><span class="std std-doc">Efficient Array Computing</span></a></p></li>
+</ol>
+<div class="alert alert-info">
+</section>
+<section id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Link to this heading"></a></h2>
+<p>This material is for all researchers and engineers who work with large or small datasets and who want to learn powerful tools and best practices for writing more performant, parallelised, robust and reproducible data analysis pipelines.</p>
+<p>By the end of a workshop covering this lesson, learners should:</p>
+<ul class="simple">
+<li><p>Have a good overview of available tools and libraries for improving performance in Python (<strong>link to leaves in skill tre</strong>)</p></li>
+<li><p>Knowing libraries for efficiently storing, reading and writing large data  (<strong>link to leaves in skill tree</strong>)</p></li>
+<li><p>Be comfortable working with NumPy arrays and Pandas dataframes for data analysis using Python (<strong>link to leaves in skill tree</strong>)</p></li>
+<li><p>…</p></li>
+</ul>
+</div><div class="alert alert-success">
+</section>
+<section id="instructors-guide">
+<h2>Instructor’s guide<a class="headerlink" href="#instructors-guide" title="Link to this heading"></a></h2>
+<section id="teaching-hours-and-number-of-participants">
+<h3>Teaching hours and number of participants<a class="headerlink" href="#teaching-hours-and-number-of-participants" title="Link to this heading"></a></h3>
+<p>This module is developed for one instructor and two teaching assistants during teaching for 40 students. The teaching can be delivered online, onsite, or in a hybrid format, providing flexibility to accommodate different learning preferences and circumstances. Whether students attend in person or remotely, the course materials and exercises are designed to ensure a consistent and engaging learning experience. Instructors can leverage virtual tools such as video conferencing and shared coding environments alongside traditional classroom setups to support all modes of delivery effectively.</p>
+<p>Students are expected to dedicate 2-4 hours in total. This estimate combines contact hours, such as lectures or exercises (1~2 hours), with independent learning time (1-2 hours), which include self-study, assignments, and revision. Balancing these components ensures students have sufficient guided instruction while allowing ample time for personal engagement with the material.</p>
+</section>
+<section id="mode-of-teaching-and-exercising">
+<h3>Mode of teaching and exercising<a class="headerlink" href="#mode-of-teaching-and-exercising" title="Link to this heading"></a></h3>
+<p>Before teaching this module, the instructor is expected to set up the programming environment on the HPC cluster or assist students with installing the necessary packages on their personal computers. During exercises, instructors may use Jupyter notebooks for demonstrations or copy and paste code examples from the webpage into script files. These scripts can then be executed on students’ personal computers or the HPC cluster, providing a flexible learning experience.</p>
+</section>
+<section id="hardware-requirements-on-hpc-clusters">
+<h3>Hardware requirements on HPC clusters<a class="headerlink" href="#hardware-requirements-on-hpc-clusters" title="Link to this heading"></a></h3>
+<p>The HPC cluster used for this course should be equipped with modern NVIDIA GPUs that support CUDA programming. It is recommended that the cluster allocates a minimum of 20 GPU hours per person throughout the course duration. This allocation ensures sufficient time for code development, testing, and running computationally intensive workloads. A minimum of 16 GB GPU memory is recommended to handle large datasets and complex computations efficiently.</p>
+</div><div class="alert alert-warning">
+</section>
+</section>
+<section id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Link to this heading"></a></h2>
+<p>Don’t forget to check out additional <a class="reference external" href="https://www.evitahpc.eu/"><strong>course materials</strong></a> from XXX. Please <a class="reference external" href="https://www.evitahpc.eu/"><strong>contact us</strong></a> if you want to reuse these course materials in your teaching. You can also join the <a class="reference external" href="https://www.evitahpc.eu/"><strong>XXX channel</strong></a> to share your experience and get more help from the community.</p>
+</div><div class="alert alert-danger">
+</section>
+<section id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Link to this heading"></a></h2>
+<p>Copyright © 2025 XXX. This material is released by XXX under the Creative Commons Attribution 4.0 International (CC BY 4.0). These materials may include references to hardware and software developed by other entities; all applicable licensing and copyrights apply.</p>
+</div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, The contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Sphinx Directives &mdash; High Performance Data Analytics in Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/overrides.css?v=c88db32d" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=187304be"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=35a8b989"></script>
+      <script src="../_static/minipres.js?v=a0d29692"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="prev" title="2. Efficient Array Computing" href="../Python-HPDA-2-EfficientArrayComputing/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            High Performance Data Analytics in Python
+              <img src="../_static/evita.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Software setup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Python-HPDA-0-SoftwareSetup/">Setting Up Programming Environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lesson episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Python-HPDA-1-Motivation/">1. Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python-HPDA-2-EfficientArrayComputing/">2. Efficient Array Computing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Sphinx Directives</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directives">Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#define-addition-keywords">Define addition keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#badges">Badges</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">High Performance Data Analytics in Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3. Sphinx Directives</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ENCCS/evita-material-template/blob/main/content/3-jupyter-notebook-styling.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-directives">
+<h1>3. Sphinx Directives<a class="headerlink" href="#sphinx-directives" title="Link to this heading"></a></h1>
+<section id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Link to this heading"></a></h2>
+<p>There are directives in Sphinx to highlight code blocks</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">discussion</span></code>, <code class="docutils literal notranslate"><span class="pre">demo</span></code>, <code class="docutils literal notranslate"><span class="pre">exercises</span></code>, <code class="docutils literal notranslate"><span class="pre">solution</span></code>, <code class="docutils literal notranslate"><span class="pre">homework</span></code>, <code class="docutils literal notranslate"><span class="pre">seealso</span></code>…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">note</span></code>, <code class="docutils literal notranslate"><span class="pre">hint</span></code>, <code class="docutils literal notranslate"><span class="pre">important</span></code>, <code class="docutils literal notranslate"><span class="pre">attention</span></code>, <code class="docutils literal notranslate"><span class="pre">caution</span></code>,<code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">danger</span></code>, …</p></li>
+</ul>
+<p>In Jupyter NB, there is no such stryling settings. We can ask course developers to provide some keywords (as listed below) before the code block. and we can convert these Jupyter NB blocks to Sphinx blocks.</p>
+<p>The format in the Jupyter NB should look like the content below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;font color=&#39;purple&#39;&gt;**Discussion**&lt;/font&gt;: How large is your data?
+
+- How large is the data you are working with?
+- Are you experiencing performance bottlenecks when you try to analyse it?
+&lt;/div&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Highlight the keyword (here it is <code class="docutils literal notranslate"><span class="pre">Discussion</span></code>) using the corresponding font color</p></li>
+<li><p>the Jupyter NB code block starts with <code class="docutils literal notranslate"><span class="pre">&lt;font</span> <span class="pre">color=</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">&lt;/div&gt;</span></code></p></li>
+</ul>
+<div class="admonition-how-large-is-your-data discussion important admonition" id="discussion-0">
+<p class="admonition-title">How large is your data?</p>
+<ul class="simple">
+<li><p>How large is the data you are working with?</p></li>
+<li><p>Are you experiencing performance bottlenecks when you try to analyse it?</p></li>
+</ul>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Do not remove the following line.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Do not remove the following line.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not remove the following line.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Here is a danger!</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Here is an error!</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>In this exercise, you can use A instead of B.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In this exercise, you can use A instead of B.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You should use the latest version of Python.</p>
+</div>
+<div class="admonition-exercise exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise</p>
+<p>Description of exercise</p>
+<ul class="simple">
+<li><p>Do this</p></li>
+<li><p>then do this</p></li>
+<li><p>finally observe what happens when you do this…do this…</p></li>
+</ul>
+</div>
+<div class="dropdown exercise important admonition" id="exercise-1">
+<p class="admonition-title">With an option “Click to show”</p>
+<p>Description of exercise</p>
+<ul class="simple">
+<li><p>Do this</p></li>
+<li><p>then do this</p></li>
+<li><p>finally observe what happens when you do this…do this…</p></li>
+</ul>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<p>Here is the solution for above exercises.</p>
+</div>
+<div class="admonition-homework homework important admonition" id="homework-0">
+<p class="admonition-title">Homework</p>
+<p>Here are the homework assignments for this episode.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we chose to summarize the data by its mean, but many other common statistical functions are available as dataframe methods, like <code class="docutils literal notranslate"><span class="pre">std()</span></code>, <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code>, <code class="docutils literal notranslate"><span class="pre">cumsum()</span></code>, <code class="docutils literal notranslate"><span class="pre">median()</span></code>, <code class="docutils literal notranslate"><span class="pre">skew()</span></code>, <code class="docutils literal notranslate"><span class="pre">var()</span></code>, <em>etc.</em></p>
+</div>
+<div class="admonition-demo demo admonition" id="demo-0">
+<p class="admonition-title">Demo</p>
+<p>Code for demonstration</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>publications and webpages for references</p>
+</div>
+</section>
+<section id="define-addition-keywords">
+<h2>Define addition keywords<a class="headerlink" href="#define-addition-keywords" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestion</span></code>, <code class="docutils literal notranslate"><span class="pre">recommendation</span></code>, …</p></li>
+</ul>
+<div class="admonition-suggestion callout admonition" id="callout-0">
+<p class="admonition-title">Suggestion</p>
+<p>It is recommended to use the CUDA version &gt; 10.0.</p>
+</div>
+</section>
+<section id="badges">
+<h2>Badges<a class="headerlink" href="#badges" title="Link to this heading"></a></h2>
+<p>Here is one badge after we publish this module at Zenodo.</p>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.14844443"><img alt="https://zenodo.org/badge/DOI/10.5281/zenodo.14844443.svg" src="https://zenodo.org/badge/DOI/10.5281/zenodo.14844443.svg" />
+</a>
+<p>We can design other badges with different colors.</p>
+<img alt="https://img.shields.io/badge/AAAA-blue?style=plastic" src="https://img.shields.io/badge/AAAA-blue?style=plastic" />
+<img alt="https://img.shields.io/badge/BBBB-purple?style=plastic" src="https://img.shields.io/badge/BBBB-purple?style=plastic" />
+<img alt="https://img.shields.io/badge/CCCC-red?style=plastic" src="https://img.shields.io/badge/CCCC-red?style=plastic" />
+<img alt="https://img.shields.io/badge/DDDD-996300?style=plastic" src="https://img.shields.io/badge/DDDD-996300?style=plastic" />
+<img alt="https://img.shields.io/badge/EEEE-gold?style=plastic" src="https://img.shields.io/badge/EEEE-gold?style=plastic" />
+<img alt="https://img.shields.io/badge/FFFF-orange?style=plastic" src="https://img.shields.io/badge/FFFF-orange?style=plastic" />
+<img alt="https://img.shields.io/badge/Introductory-green?style=plastic" src="https://img.shields.io/badge/Introductory-green?style=plastic" />
+<img alt="https://img.shields.io/badge/Intermediate-blueyellow?style=plastic" src="https://img.shields.io/badge/Intermediate-blueyellow?style=plastic" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YB-LCJBRvFs?start=4180" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Python-HPDA-2-EfficientArrayComputing/" class="btn btn-neutral float-left" title="2. Efficient Array Computing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, The contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

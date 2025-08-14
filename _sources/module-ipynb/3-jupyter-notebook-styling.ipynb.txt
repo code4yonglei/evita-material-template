@@ -1,0 +1,324 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "5a58f0dc-1f8d-4378-a525-6ab854d29230",
+   "metadata": {},
+   "source": [
+    "# 3. Jupyter Notebook Styling"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8103b2f2-60bc-40dc-b4ce-2b685364e2c8",
+   "metadata": {},
+   "source": [
+    "## Directives"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "77910792-eb7c-4cd0-afe9-469ca15c46c6",
+   "metadata": {},
+   "source": [
+    "There are directives in Sphinx to highlight code blocks\n",
+    "- `discussion`, `demo`, `exercises`, `solution`, `homework`, ...\n",
+    "- `note`, `hint`, `important`, `attention`, `caution`,`warning`, `danger`, ...\n",
+    "\n",
+    "In Jupyter NB, there is no such stryling settings. We can ask course developers to provide some keywords (as listed below) before the code block. and we can convert these Jupyter NB blocks to Sphinx blocks."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "22950afe-2b2f-4dcf-b826-9f63f4367ed0",
+   "metadata": {},
+   "source": [
+    "The format in the Jupyter NB should look like the content below:\n",
+    "```\n",
+    "<font color='purple'>**Discussion**</font>: How large is your data?\n",
+    "\n",
+    "- How large is the data you are working with?\n",
+    "- Are you experiencing performance bottlenecks when you try to analyse it?\n",
+    "</div>\n",
+    "```\n",
+    "\n",
+    "- Highlight the keyword (here it is `Discussion`) using the corresponding font color\n",
+    "- the Jupyter NB code block starts with `<font color=` and ends with `</div>`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e2e8bd54-706d-49a2-9333-f913ebacb6a1",
+   "metadata": {},
+   "source": [
+    "<font color='purple'>**Discussion**</font>: How large is your data?\n",
+    "\n",
+    "- How large is the data you are working with?\n",
+    "- Are you experiencing performance bottlenecks when you try to analyse it?\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "38bf6810-3837-4ac7-b6d6-85e4f4332408",
+   "metadata": {},
+   "source": [
+    "<font color='orange'>**Attention**</font> \n",
+    "\n",
+    "Do not remove the following line.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "38008358-7035-402f-9150-60cccdcce2f6",
+   "metadata": {},
+   "source": [
+    "<font color='orange'>**Caution**</font>\n",
+    "\n",
+    "Do not remove the following line.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3711376a-af95-45aa-a1e7-45247c7b4e68",
+   "metadata": {},
+   "source": [
+    "<font color='orange'>**Warning**</font>\n",
+    "\n",
+    "Do not remove the following line.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24435b5e-fe94-4137-974e-d586dc00eac8",
+   "metadata": {},
+   "source": [
+    "<font color='red'>**Danger**</font>\n",
+    "\n",
+    "Here is a danger!\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "36fc8da0-1383-4b32-8236-4bce33de33b3",
+   "metadata": {},
+   "source": [
+    "<font color='red'>**Error**</font>\n",
+    "\n",
+    "Here is an error!\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "edf7bbd9-79c0-4817-84ba-086583af8a6a",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Hint**</font>\n",
+    "\n",
+    "In this exercise, you can use A instead of B.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4644005-188a-44c6-ac4f-0515f809a6de",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Tip**</font>\n",
+    "\n",
+    "In this exercise, you can use A instead of B.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "38922224-4617-4607-bd6f-ed30de7ca584",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Important**</font>\n",
+    "\n",
+    "You should use the latest version of Python.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2d735106-2dd2-42ef-90a3-dd4fc27c8e23",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Exercise**</font>\n",
+    "\n",
+    "Description of exercise\r\n",
+    "- Do this\r\n",
+    "- then do this\r\n",
+    "- finally observe what happens when you do this…do this…\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c455d2ab-fab6-4ea4-ac20-50347e4d6e32",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Exercise**</font>: With an option `Click to show`\n",
+    ":class: dropdown\n",
+    "\n",
+    "Description of exercise\n",
+    "- Do this\n",
+    "- then do this\n",
+    "- finally observe what happens when you do this…do this…\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5972e715-ea10-4cc0-9d1c-229d4a648a26",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Solution**</font>\n",
+    "\n",
+    "Here is the solution for above exercises.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b93af28d-4a02-4ed4-9166-fb0959ae3c68",
+   "metadata": {},
+   "source": [
+    "<font color='green'>**Homework**</font>\n",
+    "\n",
+    "Here are the homework assignments for this episode.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fdd6c818-b094-4db5-90e1-a6d8ce0d302a",
+   "metadata": {},
+   "source": [
+    "<font color='blue'>**Note**</font>\n",
+    "\n",
+    "Here we chose to summarize the data by its mean, but many other common statistical functions are available as dataframe methods, like `std()`, `min()`, `max()`, `cumsum()`, `median()`, `skew()`, `var()`, *etc.*\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "81d3b39f-3b24-4fb1-be32-cea5ee8f4d72",
+   "metadata": {},
+   "source": [
+    "<font color='blue'>**Demo**</font>\n",
+    "\n",
+    "Code for demonstration\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2c1a25f7-2af6-4a39-b90a-054cddc80b6a",
+   "metadata": {},
+   "source": [
+    "## Define addition keywords\n",
+    "\n",
+    "- `references`, ...\n",
+    "- `suggestion`, `recommendation`, ..."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "50f11c7e-0e2b-4e22-80d6-421faa91aee9",
+   "metadata": {},
+   "source": [
+    "<font color='blue'>**References**</font>\n",
+    "\n",
+    "publications and webpages for references\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d55389d3-86d9-46a0-9097-e21922c43af2",
+   "metadata": {},
+   "source": [
+    "<font color='darkgreen'>**Recommendation**</font>\n",
+    "\n",
+    "It is recommended to use the CUDA version > 10.0.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "da64eaab-f2d4-4c41-be17-4ae98c060af8",
+   "metadata": {},
+   "source": [
+    "## Badges"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bdea2dbd-9ace-41e3-94cf-22d03452a801",
+   "metadata": {},
+   "source": [
+    "Here is one badge after we publish this module at Zenodo."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b5734f06-4852-42c2-b90b-ddf9024cbc3f",
+   "metadata": {},
+   "source": [
+    "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14844443.svg)](https://doi.org/10.5281/zenodo.14844443)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aa780a11-922b-4171-8a83-36adc9539028",
+   "metadata": {},
+   "source": [
+    "We can design other badges with different colors."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "943a0b9d-117e-4357-b3db-874676f87e16",
+   "metadata": {},
+   "source": [
+    "<img src=\"https://img.shields.io/badge/AAAA-blue?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/BBBB-purple?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/CCCC-red?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/DDDD-996300?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/EE EE-gold?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/FF FF-orange?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/Introductory-green?style=plastic\">\n",
+    "<img src=\"https://img.shields.io/badge/Intermediate-blueyellow?style=plastic\">"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
